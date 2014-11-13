@@ -3,8 +3,7 @@
   "name": "protect",
   "description": "protect your object from being overridden",
   "keywords": [
-    "setHeader",
-    "headers"
+    "object"
   ],
   "preferGlobal": false,
   "homepage": "http://supergiovane.tk/#/protect",

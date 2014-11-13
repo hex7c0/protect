@@ -24,7 +24,7 @@ inside nodejs project
 ```js
 var protect = require('protect');
 
-protect({
+var newObj = protect({
     foo: 'ciao'
 });
 ```
