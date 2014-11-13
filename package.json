@@ -1,0 +1,38 @@
+{
+  "version": "0.0.1",
+  "name": "protect",
+  "description": "protect your object from being overridden",
+  "keywords": [
+    "setHeader",
+    "headers"
+  ],
+  "preferGlobal": false,
+  "homepage": "http://supergiovane.tk/#/protect",
+  "author": {
+    "name": "hex7c0",
+    "email": "hex7c0@gmail.com",
+    "url": "http://hex7c0.tk/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hex7c0/protect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hex7c0/protect/issues",
+    "email": "hex7c0@gmail.com"
+  },
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "~2.0"
+  },
+  "engines": {
+    "node": "^0.10"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "mocha --bail --check-leaks test/"
+  },
+  "license": "GPLv3"
+}
