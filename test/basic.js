@@ -52,7 +52,7 @@ describe('basic', function() {
       b[i] = 'mod of b';
     } catch (e) {
       assert
-          .equal(e.message, 'Cannot assign to read only property \'foo4\' of object');
+          .equal(/Cannot assign to read only property /.test(e.message), true);
     }
     assert.equal(a[i], 'mod of a', 'last item of a');
     assert.notEqual(b[i], 'mod of b', 'last item of b');
