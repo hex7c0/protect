@@ -14,11 +14,11 @@
  */
 // import
 try {
-    var protect = require('..');
-    var assert = require('assert');
+  var protect = require('..');
+  var assert = require('assert');
 } catch (MODULE_NOT_FOUND) {
-    console.error(MODULE_NOT_FOUND);
-    process.exit(1);
+  console.error(MODULE_NOT_FOUND);
+  process.exit(1);
 }
 
 /*
@@ -26,32 +26,32 @@ try {
  */
 describe('basic', function() {
 
-    var a, b;
+  var a, b;
 
-    it('should return a new object', function(done) {
+  it('should return a new object', function(done) {
 
-        a = {
-            foo: 'ciao',
-            2: 'ciao2',
-            foo3: 3,
-            foo4: false
-        };
-        b = protect(a);
-        done();
-    });
-    it('should test new object', function(done) {
+    a = {
+      foo: 'ciao',
+      2: 'ciao2',
+      foo3: 3,
+      foo4: false
+    };
+    b = protect(a);
+    done();
+  });
+  it('should test new object', function(done) {
 
-        for ( var i in b) {
-            assert.equal(b[i], a[i]);
-        }
+    for ( var i in b) {
+      assert.equal(b[i], a[i]);
+    }
 
-        a[i] = 'mod';
-        try {
-            b[i] = 'mod';
-        } catch (TypeError) {
-            // pass
-        }
-        assert.notEqual(b[i], a[i]);
-        done();
-    });
+    a[i] = 'mod';
+    try {
+      b[i] = 'mod';
+    } catch (TypeError) {
+      // pass
+    }
+    assert.notEqual(b[i], a[i]);
+    done();
+  });
 });
