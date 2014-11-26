@@ -16,22 +16,22 @@
 /**
  * protect your baby :o
  * 
- * @function setHeader
+ * @function protect
  * @param {Object} obj - your object
  * @return {Object}
  */
 function protect(obj) {
 
-    var next = {};
+  var next = {};
 
-    for ( var i in obj) {
-        Object.defineProperty(next, i, {
-            enumerable: true,
-            configurable: false,
-            value: obj[i]
-        });
-    }
+  for ( var i in obj) {
+    Object.defineProperty(next, i, {
+      configurable: false,
+      enumerable: true,
+      value: obj[i]
+    });
+  }
 
-    return next;
+  return next;
 }
 module.exports = protect;
