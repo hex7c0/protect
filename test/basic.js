@@ -27,6 +27,7 @@ try {
 describe('basic', function() {
 
   var a, b;
+  var foo4 = false;
 
   it('should return a new object', function(done) {
 
@@ -34,7 +35,7 @@ describe('basic', function() {
       foo: 'ciao',
       2: 'ciao2',
       foo3: 3,
-      foo4: false
+      foo4: foo4
     };
     b = protect(a);
     done();
@@ -45,12 +46,17 @@ describe('basic', function() {
       assert.equal(b[i], a[i]);
     }
 
-    a[i] = 'mod';
+    // i === 'foo4'
+    a[i] = 'mod of a';
     try {
-      b[i] = 'mod';
-    } catch (TypeError) {
-      // pass
+      b[i] = 'mod of b';
+    } catch (e) {
+      assert
+          .equal(e.message, 'Cannot assign to read only property \'foo4\' of object');
     }
+    assert.equal(a[i], 'mod of a', 'last item of a');
+    assert.notEqual(b[i], 'mod of b', 'last item of b');
+    assert.equal(b[i], foo4);
     assert.notEqual(b[i], a[i]);
     done();
   });
