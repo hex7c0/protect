@@ -18,11 +18,15 @@
  * 
  * @function protect
  * @param {Object} obj - your object
+ * @param {Boolean} [normal] - normal constructor
  * @return {Object}
  */
-function protect(obj) {
+function protect(obj, normal) {
 
   var next = Object.create(null);
+  if (normal) {
+    next = {};
+  }
 
   for ( var i in obj) {
     Object.defineProperty(next, i, {
