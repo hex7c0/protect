@@ -22,7 +22,7 @@
  */
 function protect(obj) {
 
-  var next = {};
+  var next = Object.create(null);
 
   for ( var i in obj) {
     Object.defineProperty(next, i, {
