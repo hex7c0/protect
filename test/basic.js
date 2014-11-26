@@ -60,4 +60,12 @@ describe('basic', function() {
     assert.notEqual(b[i], a[i]);
     done();
   });
+  it('should add new item to new object, but isn\'t protected', function(done) {
+
+    b.ciao = 'ciao';
+    assert.equal(b.ciao, 'ciao');
+    b.ciao = 'ciao2';
+    assert.equal(b.ciao, 'ciao2');
+    done();
+  });
 });
