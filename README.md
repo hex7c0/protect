@@ -29,10 +29,11 @@ var newObj = protect({
 });
 ```
 
-### protect(obj)
+### protect(obj,[normal])
 
 #### options
 
- - `obj` - **Object** your object *(default "required")*
+ - `obj` - **Object** Your object *(default "required")*
+ - `normal` - **Boolean** Using `{}` constructor *(default "Object.create(null)")*
 
 ### [License GPLv3](http://opensource.org/licenses/GPL-3.0)
