@@ -1,8 +1,10 @@
 # [protect](http://supergiovane.tk/#/protect)
 
-[![NPM version](https://badge.fury.io/js/protect.svg)](http://badge.fury.io/js/protect)
-[![Build Status](https://travis-ci.org/hex7c0/protect.svg)](https://travis-ci.org/hex7c0/protect)
-[![Dependency Status](https://david-dm.org/hex7c0/protect/status.svg)](https://david-dm.org/hex7c0/protect)
+[![NPM version](https://img.shields.io/npm/v/protect.svg)](https://www.npmjs.com/package/protect)
+[![Linux Status](https://img.shields.io/travis/hex7c0/protect.svg?label=linux)](https://travis-ci.org/hex7c0/protect)
+[![Windows Status](https://img.shields.io/appveyor/ci/hex7c0/protect.svg?label=windows)](https://ci.appveyor.com/project/hex7c0/protect)
+[![Dependency Status](https://img.shields.io/david/hex7c0/protect.svg)](https://david-dm.org/hex7c0/protect)
+[![Coveralls](https://img.shields.io/coveralls/hex7c0/protect.svg)](https://coveralls.io/r/hex7c0/protect)
 
 protect your object from being overridden
 
@@ -27,13 +29,26 @@ var protect = require('protect');
 var newObj = protect({
     foo: 'ciao'
 });
+
+newObj.ciao = 'ciao';
+newObj.foo = 123;
+```
+with this exception
+```sh
+a.foo = 123;
+      ^
+TypeError: Cannot assign to read only property 'foo' of [object Object]
 ```
 
-### protect(obj,[normal])
+### protect(obj, [normal])
 
 #### options
 
  - `obj` - **Object** Your object *(default "required")*
  - `normal` - **Boolean** Using `{}` constructor *(default "Object.create(null)")*
 
-### [License GPLv3](http://opensource.org/licenses/GPL-3.0)
+## Examples
+
+Take a look at my [examples](examples)
+
+### [License GPLv3](LICENSE)
