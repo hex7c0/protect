@@ -2,9 +2,8 @@
 /**
  * @file protect main
  * @module protect
- * @package protect
  * @subpackage main
- * @version 0.0.2
+ * @version 0.1.0
  * @author hex7c0 <hex7c0@gmail.com>
  * @copyright hex7c0 2014
  * @license GPLv3
@@ -28,7 +27,7 @@ function protect(obj, normal) {
     next = {};
   }
 
-  for ( var i in obj) {
+  for ( var i in obj) { // add static value
     Object.defineProperty(next, i, {
       configurable: false,
       enumerable: true,
