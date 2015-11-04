@@ -1,12 +1,12 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "protect",
   "description": "protect your object from being overridden",
   "keywords": [
     "object"
   ],
   "preferGlobal": false,
-  "homepage": "http://supergiovane.tk/#/protect",
+  "homepage": "https://github.com/hex7c0/protect",
   "author": {
     "name": "hex7c0",
     "email": "hex7c0@gmail.com",

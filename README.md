@@ -1,4 +1,4 @@
-# [protect](http://supergiovane.tk/#/protect)
+# [protect](https://github.com/hex7c0/protect)
 
 [![NPM version](https://img.shields.io/npm/v/protect.svg)](https://www.npmjs.com/package/protect)
 [![Linux Status](https://img.shields.io/travis/hex7c0/protect.svg?label=linux)](https://travis-ci.org/hex7c0/protect)
